@@ -11,7 +11,7 @@
   </head>
 
   <body>
-
+<div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="<%= posts_path %>">Статьи</a>
@@ -49,10 +49,11 @@
     </div>
     <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
   </nav>
+</div>
 
-    <%= link_to 'Все статьи', posts_path %>
-    |
-    <%= link_to 'Новая статья', new_post_path %>
-    <%= yield %>
+    <div class="container main" >
+      <%= yield %>
+    </div>
+
   </body>
 </html>
