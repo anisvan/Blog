@@ -7069,3 +7069,77 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 7687)
 
 
+Started GET "/posts" for 127.0.0.1 at 2021-09-20 20:07:19 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 1.9ms | Allocations: 569)
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 5246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 11777)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.7ms | Allocations: 13982)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-09-20 20:07:22 +0600
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.2ms | Allocations: 1354)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 7690)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 8346)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-09-20 20:07:28 +0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "summary"=>"dsfsd", "body"=>"fsdf"}, "commit"=>"Сохрнаить"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.2ms | Allocations: 1857)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 7917)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 9137)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-09-20 20:10:28 +0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "summary"=>"dsfsd", "body"=>"fsdf"}, "commit"=>"Сохрнаить"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 7.1ms | Allocations: 1706)
+  Rendered posts/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1796)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14594.0ms | Allocations: 70807)
+Completed 200 OK in 14597ms (Views: 14595.1ms | ActiveRecord: 0.0ms | Allocations: 71861)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-09-20 20:10:52 +0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "summary"=>"", "body"=>"fsdf"}, "commit"=>"Сохрнаить"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 9.9ms | Allocations: 2589)
+  Rendered posts/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 8604)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 9663)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-09-20 20:11:25 +0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "summary"=>"", "body"=>"fsdf"}, "commit"=>"Сохрнаить"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 9.2ms | Allocations: 2566)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14532.9ms | Allocations: 74683)
+Completed 200 OK in 14537ms (Views: 14535.2ms | ActiveRecord: 0.0ms | Allocations: 75742)
+
+
