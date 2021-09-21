@@ -1,3 +1,11 @@
-
 Gemfile
 Gemfile
+/tmp/
+node_modules/.cache/babel-loader/00b8f742aa120fdad49734bc58be3bb6.json
+tmp/miniprofiler/mp_views_127.0.0.1
+tmp/cache/webpacker/last-compilation-digest-development
+tmp/cache/bootsnap/compile-cache/08/5864c23aecfb00
+tmp/cache/bootsnap/compile-cache/46/4ccdf068b3becd
+public/packs/js/application-2f783e08f968af886d7f.js
+public/packs/js/application-2f783e08f968af886d7f.js.map
+.gitignore
