@@ -17,6 +17,12 @@
 		
 	</section>
 
+	<section class="footer-summary">
+		<%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge rounded-pill bg-primary' }.join(' ') %>
+		
+		
+	</section>
+
 
 </article>
 
