@@ -7775,3 +7775,392 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms | Allocations: 9038)
 
 
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:07:37 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 0.9ms | Allocations: 252)
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 1865)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 9368)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.8ms | Allocations: 9827)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-09-21 12:07:38 +0600
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.5ms | Allocations: 805)
+  Rendered posts/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 8495)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 9094)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageToPosts (20210921061859)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "posts" ADD "image" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210921061859"]]
+  [1m[36mTRANSACTION (61.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:24:37 +0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 6.6ms | Allocations: 744)
+  Rendered posts/index.html.erb within layouts/application (Duration: 61.8ms | Allocations: 8161)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.4ms | Allocations: 23910)
+Completed 200 OK in 185ms (Views: 155.1ms | ActiveRecord: 3.6ms | Allocations: 31743)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:24:40 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 7965)
+Completed 200 OK in 45ms (Views: 27.4ms | ActiveRecord: 0.5ms | Allocations: 10114)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2021-09-21 12:24:42 +0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 62.5ms | Allocations: 2677)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 66.7ms | Allocations: 3065)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 10617)
+Completed 200 OK in 103ms (Views: 97.8ms | ActiveRecord: 0.2ms | Allocations: 11840)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2021-09-21 12:27:13 +0600
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Title test", "summary"=>"dsfsdfа", "body"=>"gfdgd", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055bd6e972580 @tempfile=#<Tempfile:/tmp/RackMultipart20210921-10229-c2w2dm.jpg>, @original_filename="KzR67Gn0BWo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"KzR67Gn0BWo.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Изменить статью", "id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mPost Update (2.9ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ?, "image" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2021-09-21 06:27:13.747257"], ["image", "KzR67Gn0BWo.jpg"], ["id", 7]]
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 279ms (ActiveRecord: 44.6ms | Allocations: 12700)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:27:13 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 8137)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.2ms | Allocations: 9184)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2021-09-21 12:27:31 +0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 6.1ms | Allocations: 925)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 8541)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.1ms | Allocations: 9548)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:27:35 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 1.9ms | Allocations: 255)
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 8514)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms | Allocations: 8979)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:29:31 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 4.8ms | Allocations: 501)
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1741)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 9731)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.1ms | Allocations: 11099)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:29:32 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 543)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 8419)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 10053)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:30:55 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 299)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14727.1ms | Allocations: 75404)
+Completed 200 OK in 14731ms (Views: 14727.9ms | ActiveRecord: 0.1ms | Allocations: 76407)
+
+
+Started GET "/posts/7/edit" for 127.0.0.1 at 2021-09-21 12:31:43 +0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 12.8ms | Allocations: 1365)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1702)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 9100)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 0.2ms | Allocations: 10260)
+
+
+Started PATCH "/posts/7" for 127.0.0.1 at 2021-09-21 12:32:19 +0600
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Что такое Lorem Ipsum?", "summary"=>"Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне.", "body"=>"Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."}, "commit"=>"Изменить статью", "id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mPost Update (0.7ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "summary" = ?, "body" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Что такое Lorem Ipsum?"], ["summary", "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне."], ["body", "Lorem Ipsum - это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum."], ["updated_at", "2021-09-21 06:32:19.272529"], ["id", 7]]
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (57.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 208ms (ActiveRecord: 58.5ms | Allocations: 5485)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:32:19 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 7803)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.2ms | Allocations: 8815)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:32:25 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 0.8ms | Allocations: 255)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 8532)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.3ms | Allocations: 9007)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:32:32 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 7777)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 0.3ms | Allocations: 8783)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-21 12:35:49 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 645)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 8629)
+Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 0.2ms | Allocations: 10521)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:35:51 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 63.8ms | Allocations: 4168)
+  Rendered posts/index.html.erb within layouts/application (Duration: 71.7ms | Allocations: 5364)
+  Rendered layout layouts/application.html.erb (Duration: 82.4ms | Allocations: 5433)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.2ms | Allocations: 6072)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12: 	</section>
+    13: 
+    14: 	<section class="post-summary clearfix">
+    15: 		<%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb'%>
+    16: 		<%= post.summary %>
+    17: 		
+    18: 	</section>
+  
+app/views/posts/_post.html.erb:15
+app/views/posts/index.html.erb:3
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:36:59 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 2.9ms | Allocations: 1686)
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2621)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2689)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3197)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    12: 	</section>
+    13: 
+    14: 	<section class="post-summary clearfix">
+    15: 		<%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb'%>
+    16: 		<%= post.summary %>
+    17: 		
+    18: 	</section>
+  
+app/views/posts/_post.html.erb:15
+app/views/posts/index.html.erb:3
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:37:53 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 2.5ms | Allocations: 728)
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1964)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14004.3ms | Allocations: 74997)
+Completed 200 OK in 14008ms (Views: 14006.3ms | ActiveRecord: 0.2ms | Allocations: 76329)
+
+
+Started GET "/posts/10/edit" for 127.0.0.1 at 2021-09-21 12:38:44 +0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 8.9ms | Allocations: 1385)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1725)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 9118)
+Completed 200 OK in 50ms (Views: 43.9ms | ActiveRecord: 0.2ms | Allocations: 10329)
+
+
+Started PATCH "/posts/10" for 127.0.0.1 at 2021-09-21 12:39:45 +0600
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Почему он используется?", "summary"=>"Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное", "body"=>"Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации \"Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..\" Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам \"lorem ipsum\" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f116cb5e738 @tempfile=#<Tempfile:/tmp/RackMultipart20210921-10229-ujtefn.jpg>, @original_filename="UYQ-UvdC5qA.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"UYQ-UvdC5qA.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Изменить статью", "id"=>"10"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mPost Update (8.5ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "summary" = ?, "body" = ?, "updated_at" = ?, "image" = ? WHERE "posts"."id" = ?[0m  [["title", "Почему он используется?"], ["summary", "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное"], ["body", "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации \"Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст..\" Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам \"lorem ipsum\" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты)."], ["updated_at", "2021-09-21 06:39:46.010679"], ["image", "UYQ-UvdC5qA.jpg"], ["id", 10]]
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (74.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 270ms (ActiveRecord: 83.0ms | Allocations: 10262)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2021-09-21 12:39:46 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 487)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 7981)
+Completed 200 OK in 82ms (Views: 59.7ms | ActiveRecord: 0.2ms | Allocations: 9121)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 12:40:09 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 6.4ms | Allocations: 576)
+  Rendered posts/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1408)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 8891)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.3ms | Allocations: 9357)
+
+
