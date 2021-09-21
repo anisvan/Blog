@@ -31,7 +31,9 @@ class PostsController < ApplicationController
 	def update
 		
 		if @post.update(post_params)
-			redirect_to @post, success: 'Статья успешно обновлена'
+			
+			redirect_to @post,  success: 'Статья успешно обновлена'
+
 		else
 			render :edit, danger: 'Статья не обновлена'
 		end
@@ -50,6 +52,6 @@ class PostsController < ApplicationController
 	end
 
 	def post_params
-		params.require(:post).permit(:title, :summary, :body, :image)
+		params.require(:post).permit(:title, :summary, :body, :image, :content)
 	end
 end
