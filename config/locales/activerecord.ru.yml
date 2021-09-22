@@ -8,6 +8,7 @@ ru:
         summary: 'Краткое содержание'
         body: 'Содержание'
         all_tags: 'Теги'
+        image: 'Изображение статьи'
     errors:
       messages:
         blank: 'не может быть пустым'

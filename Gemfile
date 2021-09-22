@@ -23,6 +23,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
+gem 'will_paginate', '~> 3.3.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
