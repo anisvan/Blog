@@ -14781,3 +14781,1676 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 1.1ms | Allocations: 14118)
 
 
+Started GET "/posts" for 127.0.0.1 at 2021-09-21 19:55:08 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 29.1ms | Allocations: 4597)
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 6632)
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 8388)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 2.5ms | Allocations: 9739)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-21 19:59:51 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 26.6ms | Allocations: 4584)
+  Rendered posts/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 5832)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 69.7ms | Allocations: 15168)
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 1.1ms | Allocations: 16488)
+
+
+Started GET "/" for 127.0.0.1 at 2021-09-22 12:20:06 +0600
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (12.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 119.3ms | Allocations: 16950)
+  Rendered posts/index.html.erb within layouts/application (Duration: 200.5ms | Allocations: 23738)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 19204.4ms | Allocations: 130800)
+Completed 200 OK in 19350ms (Views: 19220.8ms | ActiveRecord: 22.3ms | Allocations: 139842)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:20:29 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (20.8ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (5.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 29.4ms | Allocations: 1449)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 177.4ms | Allocations: 17302)
+  Rendered posts/show.html.erb within layouts/application (Duration: 389.2ms | Allocations: 32557)
+  Rendered layout layouts/application.html.erb (Duration: 389.9ms | Allocations: 32628)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 28.7ms | Allocations: 34283)
+
+
+  
+ActionView::Template::Error (undefined method `html_safe' for #<ActionText::RichText id: 4, name: "body", body: #<ActionText::Content "<div class=\"trix-conte...">, record_type: "Post", record_id: 7, created_at: "2021-09-21 10:45:47.643809000 +0300", updated_at: "2021-09-21 11:09:24.705787000 +0300">
+Did you mean?  html_safe?):
+    13: 
+    14: 	<section class="post-body">
+    15: 		<%= image_tag @post.image.url(:large), class: 'img-show' if @post.image? %>
+    16: 		<%= @post.body.html_safe %>
+    17: 		
+    18: 	</section>
+    19: </article>
+  
+app/views/posts/show.html.erb:16
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:20:44 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.3ms | Allocations: 654)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 24.9ms | Allocations: 4485)
+  Rendered posts/_disqus.html.erb (Duration: 0.5ms | Allocations: 135)
+  Rendered posts/show.html.erb within layouts/application (Duration: 41.2ms | Allocations: 7378)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 79.2ms | Allocations: 16603)
+Completed 200 OK in 90ms (Views: 82.8ms | ActiveRecord: 1.9ms | Allocations: 18648)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:20:44 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (4.0ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (2.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (2.0ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6MjU6NDQuNDQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--c4cc46fa44dc38127e6a1be81aed46bc45ec1579/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6MjU6NDQuNDQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--c4cc46fa44dc38127e6a1be81aed46bc45ec1579/27123223.jpg
+Completed 302 Found in 76ms (ActiveRecord: 10.6ms | Allocations: 16120)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6MjU6NDQuNDQ1WiIsInB1ciI6ImJsb2Jfa2V5In19--c4cc46fa44dc38127e6a1be81aed46bc45ec1579/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:20:44 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 484)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:24:29 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.5ms | Allocations: 371)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 12.7ms | Allocations: 3945)
+  Rendered posts/_disqus.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 5974)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 14657)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.8ms | Allocations: 15785)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:24:29 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mjk6MjkuNjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--1609e8d52247fbcb5048fa82e567450094c76d42/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mjk6MjkuNjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--1609e8d52247fbcb5048fa82e567450094c76d42/27123223.jpg
+Completed 302 Found in 24ms (ActiveRecord: 1.0ms | Allocations: 5003)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mjk6MjkuNjQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--1609e8d52247fbcb5048fa82e567450094c76d42/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:24:29 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:25:06 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 27.3ms | Allocations: 4425)
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 5546)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 14171)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 1.2ms | Allocations: 14808)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:25:20 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 17.5ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 13651)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 1.0ms | Allocations: 14114)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:32:52 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 30.4ms | Allocations: 4600)
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 6645)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 15965)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 2.2ms | Allocations: 17301)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:32:55 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.7ms | Allocations: 620)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 19.3ms | Allocations: 4446)
+  Rendered posts/_disqus.html.erb (Duration: 0.8ms | Allocations: 193)
+  Rendered posts/show.html.erb within layouts/application (Duration: 35.1ms | Allocations: 7096)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 15621)
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 1.7ms | Allocations: 16833)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:32:55 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.3ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mzc6NTUuNzkxWiIsInB1ciI6ImJsb2Jfa2V5In19--83536341b8d4740c4bdb5d647ed3c0d5d0b6d59f/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mzc6NTUuNzkxWiIsInB1ciI6ImJsb2Jfa2V5In19--83536341b8d4740c4bdb5d647ed3c0d5d0b6d59f/27123223.jpg
+Completed 302 Found in 30ms (ActiveRecord: 2.3ms | Allocations: 5034)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6Mzc6NTUuNzkxWiIsInB1ciI6ImJsb2Jfa2V5In19--83536341b8d4740c4bdb5d647ed3c0d5d0b6d59f/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:32:55 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/" for ::1 at 2021-09-22 12:36:10 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 22.4ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 5027)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 13672)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 1.0ms | Allocations: 14080)
+
+
+Started GET "/posts/7" for ::1 at 2021-09-22 12:36:12 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.0ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 16.1ms | Allocations: 4361)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 28.5ms | Allocations: 6146)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 14670)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 1.1ms | Allocations: 15675)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for ::1 at 2021-09-22 12:36:12 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NDE6MTIuNDQxWiIsInB1ciI6ImJsb2Jfa2V5In19--55a085442a1a28ca23f86ef2fff8a17bca376ad8/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NDE6MTIuNDQxWiIsInB1ciI6ImJsb2Jfa2V5In19--55a085442a1a28ca23f86ef2fff8a17bca376ad8/27123223.jpg
+Completed 302 Found in 22ms (ActiveRecord: 0.6ms | Allocations: 5060)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NDE6MTIuNDQxWiIsInB1ciI6ImJsb2Jfa2V5In19--55a085442a1a28ca23f86ef2fff8a17bca376ad8/27123223.jpg" for ::1 at 2021-09-22 12:36:12 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:37:34 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 28.5ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 5027)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 13650)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 1.1ms | Allocations: 14113)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2021-09-22 12:37:38 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.5ms | Allocations: 356)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2030)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 10653)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.7ms | Allocations: 11658)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:37:43 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.0ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 24.7ms | Allocations: 3800)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 36.2ms | Allocations: 5582)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 14116)
+Completed 200 OK in 68ms (Views: 62.9ms | ActiveRecord: 1.1ms | Allocations: 15122)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:38:01 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 31.2ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 13651)
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 1.1ms | Allocations: 14114)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:38:02 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.1ms | Allocations: 339)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 19.0ms | Allocations: 3801)
+  Rendered posts/_disqus.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 5583)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | Allocations: 14107)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 1.0ms | Allocations: 15112)
+
+
+Started GET "/" for ::1 at 2021-09-22 12:38:14 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 17.1ms | Allocations: 4188)
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 5039)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 13668)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 1.2ms | Allocations: 14141)
+
+
+Started GET "/posts/7" for ::1 at 2021-09-22 12:38:15 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.1ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 10.6ms | Allocations: 3799)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 25.1ms | Allocations: 6159)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 14683)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 0.8ms | Allocations: 15688)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NDE6MTIuNDQxWiIsInB1ciI6ImJsb2Jfa2V5In19--55a085442a1a28ca23f86ef2fff8a17bca376ad8/27123223.jpg" for ::1 at 2021-09-22 12:38:15 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2021-09-22 12:38:40 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.1ms | Allocations: 351)
+  Rendered posts/_disqus.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 10651)
+Completed 200 OK in 47ms (Views: 42.3ms | ActiveRecord: 0.8ms | Allocations: 11656)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:39:01 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 26.2ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 13651)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 1.3ms | Allocations: 14114)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:39:02 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.3ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 15.8ms | Allocations: 3800)
+  Rendered posts/_disqus.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 5582)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 14106)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 1.5ms | Allocations: 15111)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:39:18 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 23.0ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 13653)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 1.1ms | Allocations: 14117)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2021-09-22 12:39:20 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (22.9ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.8ms | Allocations: 339)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 16.6ms | Allocations: 3809)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 52.4ms | Allocations: 5609)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 14137)
+Completed 200 OK in 94ms (Views: 65.4ms | ActiveRecord: 23.6ms | Allocations: 15141)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:39:20 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d", "variation_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 5], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 1ri93js0gqwzipa6a7a3znur0tya (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0NDoyMC4yNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--315fb83aa602ddc872ec7f6188eeb14f4d89cc40/wJx-N9QKnxc.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0NDoyMC4yNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--315fb83aa602ddc872ec7f6188eeb14f4d89cc40/wJx-N9QKnxc.jpg
+Completed 302 Found in 30ms (ActiveRecord: 0.8ms | Allocations: 4984)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0NDoyMC4yNTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--315fb83aa602ddc872ec7f6188eeb14f4d89cc40/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:39:20 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:39:30 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 25.7ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.7ms | Allocations: 5027)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 61.8ms | Allocations: 13650)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 1.1ms | Allocations: 14113)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:39:39 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.9ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 20.4ms | Allocations: 3800)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 35.4ms | Allocations: 5582)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 14110)
+Completed 200 OK in 67ms (Views: 61.9ms | ActiveRecord: 2.7ms | Allocations: 15115)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:39:45 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 26.0ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 13651)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 1.3ms | Allocations: 14114)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2021-09-22 12:39:47 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.7ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 16.8ms | Allocations: 3806)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 34.1ms | Allocations: 5605)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 64.6ms | Allocations: 14129)
+Completed 200 OK in 71ms (Views: 66.3ms | ActiveRecord: 1.2ms | Allocations: 15133)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2021-09-22 12:41:39 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 1.1ms | Allocations: 338)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 11.7ms | Allocations: 3805)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 21.6ms | Allocations: 5604)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 12011.9ms | Allocations: 82577)
+Completed 200 OK in 12016ms (Views: 12012.2ms | ActiveRecord: 0.8ms | Allocations: 83579)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:41:51 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d", "variation_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 5], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 1ri93js0gqwzipa6a7a3znur0tya (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0Njo1MS44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--b4d0a23e12ce0b25d527307bd5fb51d71d225a26/wJx-N9QKnxc.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0Njo1MS44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--b4d0a23e12ce0b25d527307bd5fb51d71d225a26/wJx-N9QKnxc.jpg
+Completed 302 Found in 30ms (ActiveRecord: 0.7ms | Allocations: 4957)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0Njo1MS44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--b4d0a23e12ce0b25d527307bd5fb51d71d225a26/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:41:51 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 314)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2021-09-22 12:43:13 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 5.0ms | Allocations: 654)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 29.0ms | Allocations: 4489)
+  Rendered posts/_disqus.html.erb (Duration: 1.3ms | Allocations: 190)
+  Rendered posts/show.html.erb within layouts/application (Duration: 53.8ms | Allocations: 7451)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 93.7ms | Allocations: 16646)
+Completed 200 OK in 110ms (Views: 101.6ms | ActiveRecord: 1.7ms | Allocations: 18520)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:43:14 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d", "variation_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 5], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: 1ri93js0gqwzipa6a7a3znur0tya (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0ODoxNC4yNTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--3e0d9eb9f7ccb1d720119ec162628f45488a128c/wJx-N9QKnxc.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0ODoxNC4yNTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--3e0d9eb9f7ccb1d720119ec162628f45488a128c/wJx-N9QKnxc.jpg
+Completed 302 Found in 31ms (ActiveRecord: 0.9ms | Allocations: 5062)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0ODoxNC4yNTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--3e0d9eb9f7ccb1d720119ec162628f45488a128c/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:43:14 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2021-09-22 12:44:15 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.8ms | Allocations: 653)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 27.3ms | Allocations: 4485)
+  Rendered posts/_disqus.html.erb (Duration: 1.4ms | Allocations: 190)
+  Rendered posts/show.html.erb within layouts/application (Duration: 44.1ms | Allocations: 7445)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 16639)
+Completed 200 OK in 109ms (Views: 103.5ms | ActiveRecord: 1.0ms | Allocations: 18518)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:44:16 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7a8999e97bc005a99dbe826b5a225203e2725d7d", "variation_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 5], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 1ri93js0gqwzipa6a7a3znur0tya (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0OToxNi4xNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--5661fad8f6fa85749ee6f181e44495b6d794e7e8/wJx-N9QKnxc.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0OToxNi4xNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--5661fad8f6fa85749ee6f181e44495b6d794e7e8/wJx-N9QKnxc.jpg
+Completed 302 Found in 24ms (ActiveRecord: 0.8ms | Allocations: 5047)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNWEpwT1ROcWN6Qm5jWGQ2YVhCaE5tRTNZVE42Ym5WeU1IUjVZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpU1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5kS2VDMU9PVkZMYm5oakxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuZDBwNExVNDVVVXR1ZUdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMS0wOS0yMlQwNjo0OToxNi4xNTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--5661fad8f6fa85749ee6f181e44495b6d794e7e8/wJx-N9QKnxc.jpg" for 127.0.0.1 at 2021-09-22 12:44:16 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"wJx-N9QKnxc"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:45:48 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 25.1ms | Allocations: 4584)
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 5831)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 15149)
+Completed 200 OK in 70ms (Views: 65.4ms | ActiveRecord: 3.2ms | Allocations: 16493)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-09-22 12:45:49 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 7], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered active_storage/blobs/_blob.html.erb (Duration: 2.0ms | Allocations: 619)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 34.5ms | Allocations: 4420)
+  Rendered posts/_disqus.html.erb (Duration: 0.8ms | Allocations: 190)
+  Rendered posts/show.html.erb within layouts/application (Duration: 58.1ms | Allocations: 7043)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 108.3ms | Allocations: 15570)
+Completed 200 OK in 122ms (Views: 112.5ms | ActiveRecord: 1.0ms | Allocations: 16765)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:45:49 +0600
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTA6NDkuNjI2WiIsInB1ciI6ImJsb2Jfa2V5In19--4990f0d617e6daf2b4d4c41312d404daa6fbb252/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTA6NDkuNjI2WiIsInB1ciI6ImJsb2Jfa2V5In19--4990f0d617e6daf2b4d4c41312d404daa6fbb252/27123223.jpg
+Completed 302 Found in 25ms (ActiveRecord: 0.7ms | Allocations: 5003)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTA6NDkuNjI2WiIsInB1ciI6ImJsb2Jfa2V5In19--4990f0d617e6daf2b4d4c41312d404daa6fbb252/27123223.jpg" for 127.0.0.1 at 2021-09-22 12:45:49 +0600
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:49:15 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 30.8ms | Allocations: 4584)
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 5866)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 15185)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 1.1ms | Allocations: 16525)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:49:22 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 23.4ms | Allocations: 4785)
+  Rendered posts/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 5629)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 14254)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 1.1ms | Allocations: 14766)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:49:23 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFJQUJHa0NBQU09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--da22033a61817bad11c850f33dee23b25a0c5d9f/27123223.jpg" for ::1 at 2021-09-22 12:49:23 +0600
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 23.9ms | Allocations: 4990)
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.9ms | Allocations: 5834)
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--644254264e440aa21a454a7300e8612ac02eb9f2", "variation_key"=>"[FILTERED]", "filename"=>"27123223"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.5ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "g9oDsuZ2Ke1OimlPvx7V2sj306E="], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: q8aw3f59wfqg2ezm59v7ze173ls8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTQ6MjMuMTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--f756d1c89c1efbb4b223d2611975309cfa579890/27123223.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTQ6MjMuMTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--f756d1c89c1efbb4b223d2611975309cfa579890/27123223.jpg
+Completed 302 Found in 29ms (ActiveRecord: 1.7ms | Allocations: 7248)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 87.1ms | Allocations: 22078)
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjVGhoZHpObU5UbDNabkZuTW1WNmJUVTVkamQ2WlRFM00yeHpPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJM01USXpNakl6TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25NamN4TWpNeU1qTXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjEtMDktMjJUMDY6NTQ6MjMuMTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--f756d1c89c1efbb4b223d2611975309cfa579890/27123223.jpg" for ::1 at 2021-09-22 12:49:23 +0600
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 2.1ms | Allocations: 22548)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"27123223"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/" for ::1 at 2021-09-22 12:49:33 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 20.8ms | Allocations: 4184)
+  Rendered posts/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 5028)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 13653)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 1.3ms | Allocations: 14113)
+
+
+Started GET "/posts/new" for ::1 at 2021-09-22 12:49:43 +0600
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 79.3ms | Allocations: 6767)
+  Rendered posts/new.html.erb within layouts/application (Duration: 80.6ms | Allocations: 7120)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 101.4ms | Allocations: 15959)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 0.3ms | Allocations: 16608)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-09-22 12:50:48 +0600
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 9.8ms | Allocations: 1594)
+  Rendered posts/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1706)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 10320)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.3ms | Allocations: 10859)
+
+
+Started POST "/posts" for ::1 at 2021-09-22 12:51:28 +0600
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Где его взять?", "summary"=>"Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые", "body"=>"<div>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или \"невозможных\" слов.</div>", "all_tags"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f09655e6b48 @tempfile=#<Tempfile:/tmp/RackMultipart20210922-5273-5q9zl4.jpg>, @original_filename="-BMLA9WzuVs.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"-BMLA9WzuVs.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Создать статью"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+  [1m[36mPost Create (9.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "summary", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Где его взять?"], ["summary", "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые"], ["created_at", "2021-09-22 06:51:28.982703"], ["updated_at", "2021-09-22 06:51:28.982703"], ["image", "-BMLA9WzuVs.jpg"]]
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+  [1m[36mActionText::RichText Create (0.4ms)[0m  [1m[32mINSERT INTO "action_text_rich_texts" ("name", "body", "record_type", "record_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "body"], ["body", "<div>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или \"невозможных\" слов.</div>"], ["record_type", "Post"], ["record_id", 12], ["created_at", "2021-09-22 06:51:29.025173"], ["updated_at", "2021-09-22 06:51:29.025173"]]
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 6], ["record_type", "ActionText::RichText"], ["name", "embeds"]]
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2021-09-22 06:51:29.031550"], ["id", 12]]
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (78.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:20:in `create'
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 590ms (ActiveRecord: 89.2ms | Allocations: 18315)
+
+
+Started GET "/posts/12" for ::1 at 2021-09-22 12:51:29 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.6ms | Allocations: 447)
+  Rendered posts/_disqus.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered posts/show.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2980)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 11764)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.6ms | Allocations: 13022)
+
+
+Started GET "/posts/12/edit" for ::1 at 2021-09-22 12:51:30 +0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/_form.html.erb:26
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/models/post.rb:10:in `map'
+  Rendered posts/_form.html.erb (Duration: 12.3ms | Allocations: 3613)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 13.4ms | Allocations: 3842)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 12456)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 0.8ms | Allocations: 13588)
+
+
+Started PATCH "/posts/12" for ::1 at 2021-09-22 12:51:47 +0600
+Processing by PostsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Где его взять?", "summary"=>"Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые", "body"=>"<div>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или \"невозможных\" слов.</div>", "all_tags"=>"css, go"}, "commit"=>"Изменить статью", "id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15:in `block in all_tags='
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? ORDER BY "tags"."id" ASC LIMIT ?[0m  [["name", "go"], ["LIMIT", 1]]
+  ↳ app/models/post.rb:15:in `block in all_tags='
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/models/post.rb:14:in `all_tags='
+  [1m[36mTagging Create (0.6ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 12], ["tag_id", 2], ["created_at", "2021-09-22 06:51:47.222206"], ["updated_at", "2021-09-22 06:51:47.222206"]]
+  ↳ app/models/post.rb:14:in `all_tags='
+  [1m[36mTagging Create (0.2ms)[0m  [1m[32mINSERT INTO "taggings" ("post_id", "tag_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["post_id", 12], ["tag_id", 4], ["created_at", "2021-09-22 06:51:47.228264"], ["updated_at", "2021-09-22 06:51:47.228264"]]
+  ↳ app/models/post.rb:14:in `all_tags='
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.1ms | Allocations: 303)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.5ms | Allocations: 303)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 2.9ms | Allocations: 303)
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.9ms | Allocations: 303)
+  [1m[36mTRANSACTION (62.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:33:in `update'
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 128ms (ActiveRecord: 65.1ms | Allocations: 16779)
+
+
+Started GET "/posts/12" for ::1 at 2021-09-22 12:51:47 +0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:51:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "Post"], ["name", "body"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:16
+  Rendered /home/user/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views/action_text/content/_layout.html.erb (Duration: 1.0ms | Allocations: 303)
+  Rendered posts/_disqus.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered posts/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1977)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 10609)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.6ms | Allocations: 11927)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:52:27 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 20.5ms | Allocations: 5538)
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 6400)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 15025)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 1.2ms | Allocations: 15489)
+
+
+Started GET "/tags/go" for ::1 at 2021-09-22 12:52:30 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"go"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "go"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 4], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 9.0ms | Allocations: 2998)
+  Rendered tags/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 5688)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 14508)
+Completed 200 OK in 46ms (Views: 37.1ms | ActiveRecord: 1.4ms | Allocations: 17278)
+
+
+Started GET "/tags/css" for ::1 at 2021-09-22 12:52:43 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 28.6ms | Allocations: 6200)
+  Rendered tags/show.html.erb within layouts/application (Duration: 38.9ms | Allocations: 8067)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 17176)
+Completed 200 OK in 67ms (Views: 60.1ms | ActiveRecord: 2.2ms | Allocations: 18292)
+
+
+Started GET "/tags/css" for ::1 at 2021-09-22 12:56:36 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 47.7ms | Allocations: 7703)
+  Rendered tags/show.html.erb within layouts/application (Duration: 94.9ms | Allocations: 16551)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 137.3ms | Allocations: 25857)
+Completed 200 OK in 199ms (Views: 143.8ms | ActiveRecord: 6.7ms | Allocations: 36956)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:56:41 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 27.2ms | Allocations: 6474)
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 7658)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 16535)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 1.3ms | Allocations: 17829)
+
+
+Started GET "/tags/css" for ::1 at 2021-09-22 12:56:44 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 31.9ms | Allocations: 5793)
+  Rendered tags/show.html.erb within layouts/application (Duration: 51.7ms | Allocations: 9445)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 77.5ms | Allocations: 18070)
+Completed 200 OK in 86ms (Views: 79.8ms | ActiveRecord: 1.8ms | Allocations: 19580)
+
+
+Started GET "/tags/go" for ::1 at 2021-09-22 12:56:46 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"go"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "go"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 4], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 16.4ms | Allocations: 3426)
+  Rendered tags/show.html.erb within layouts/application (Duration: 25.2ms | Allocations: 5283)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 13908)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 1.4ms | Allocations: 14959)
+
+
+Started GET "/tags/ruby" for ::1 at 2021-09-22 12:56:52 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"ruby"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "ruby"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 1], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 8.6ms | Allocations: 2937)
+  Rendered tags/show.html.erb within layouts/application (Duration: 18.1ms | Allocations: 4794)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 13423)
+Completed 200 OK in 60ms (Views: 37.3ms | ActiveRecord: 1.4ms | Allocations: 15044)
+
+
+Started GET "/tags/css" for ::1 at 2021-09-22 12:56:56 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 32.4ms | Allocations: 6793)
+  Rendered tags/show.html.erb within layouts/application (Duration: 47.4ms | Allocations: 9251)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 69.2ms | Allocations: 17876)
+Completed 200 OK in 74ms (Views: 68.5ms | ActiveRecord: 1.8ms | Allocations: 19042)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:56:59 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 40.7ms | Allocations: 7812)
+  Rendered posts/index.html.erb within layouts/application (Duration: 45.5ms | Allocations: 8669)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 17298)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 1.3ms | Allocations: 17763)
+
+
+Started GET "/posts" for ::1 at 2021-09-22 12:57:11 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 26.1ms | Allocations: 5538)
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 6395)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 15024)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.3ms | Allocations: 15484)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:57:23 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 40.0ms | Allocations: 5557)
+  Rendered posts/index.html.erb within layouts/application (Duration: 46.1ms | Allocations: 6414)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 15039)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 1.5ms | Allocations: 15502)
+
+
+Started GET "/tags/css" for 127.0.0.1 at 2021-09-22 12:57:26 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 25.2ms | Allocations: 5640)
+  Rendered tags/show.html.erb within layouts/application (Duration: 37.3ms | Allocations: 7523)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 16148)
+Completed 200 OK in 77ms (Views: 66.7ms | ActiveRecord: 2.6ms | Allocations: 17199)
+
+
+Started GET "/tags/html" for 127.0.0.1 at 2021-09-22 12:57:28 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"html"}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "html"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 3], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 9.0ms | Allocations: 1481)
+  Rendered tags/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 3328)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 11961)
+Completed 200 OK in 61ms (Views: 50.7ms | ActiveRecord: 2.4ms | Allocations: 13013)
+
+
+Started GET "/tags/css" for 127.0.0.1 at 2021-09-22 12:57:32 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"css"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "css"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 2], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 25.5ms | Allocations: 5640)
+  Rendered tags/show.html.erb within layouts/application (Duration: 39.6ms | Allocations: 7523)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 16148)
+Completed 200 OK in 74ms (Views: 67.9ms | ActiveRecord: 1.6ms | Allocations: 17200)
+
+
+Started GET "/tags/go" for 127.0.0.1 at 2021-09-22 12:57:33 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"go"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "go"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 4], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 15.6ms | Allocations: 2866)
+  Rendered tags/show.html.erb within layouts/application (Duration: 26.1ms | Allocations: 4723)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 13348)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 1.4ms | Allocations: 14399)
+
+
+Started GET "/tags/javascript" for 127.0.0.1 at 2021-09-22 12:57:35 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"javascript"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "javascript"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 5], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 8.2ms | Allocations: 1551)
+  Rendered tags/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3394)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 12023)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 1.1ms | Allocations: 13074)
+
+
+Started GET "/tags/php" for 127.0.0.1 at 2021-09-22 12:57:35 +0600
+Processing by TagsController#show as HTML
+  Parameters: {"id"=>"php"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."name" = ? LIMIT ?[0m  [["name", "php"], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tags/show.html.erb within layouts/application
+  [1m[36mPost Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ? LIMIT ?[0m  [["tag_id", 6], ["LIMIT", 1]]
+  ↳ app/views/tags/show.html.erb:3
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "taggings" ON "posts"."id" = "taggings"."post_id" WHERE "taggings"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/views/tags/show.html.erb:6
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 7.0ms | Allocations: 1551)
+  Rendered tags/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 3394)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 12019)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 2.3ms | Allocations: 13071)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:57:37 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 30.8ms | Allocations: 5535)
+  Rendered posts/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 6392)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 15021)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 1.3ms | Allocations: 15484)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-09-22 12:57:43 +0600
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 7]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 10]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 11]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = ?[0m  [["post_id", 12]]
+  ↳ app/views/posts/_post.html.erb:21:in `map'
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 24.3ms | Allocations: 5535)
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 6392)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT name, count(taggings.tag_id) as count FROM "tags" INNER JOIN "taggings" ON "taggings"."tag_id" = "tags"."id" GROUP BY "taggings"."tag_id"[0m
+  ↳ app/helpers/posts_helper.rb:3:in `sort_by'
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 15035)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 1.1ms | Allocations: 15442)
+
+
