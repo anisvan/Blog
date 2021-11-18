@@ -18,3 +18,14 @@ ru:
   tags:
     show:
       title: 'Статьи с тегом '
+  admin:
+    posts:
+      new:
+        title: 'Новая статья'
+      edit:
+        title: 'Редактирование статьи'
+      index:
+        title: 'Статьи'
+      form:
+        submit:
+          '%{action} статью'
